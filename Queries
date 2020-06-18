@@ -1,24 +1,26 @@
-from random import randint
+from random import randint    (((((........randint is the function which supposes you to select random game values.)))))
 
 #create list of options to play:
 x = ["stone","paper", "scissor"]
 
-#assign computer a random play:
-computer = x[randint(0,2)]
+#assign computer a random play: (computer will choose it's play meanwhile)
+computer = x[randint(0,2)]  ....... (((( (0,2) because the index in computer starts with 0. 0-stone, 1-paper, so on.))))
 
-#initialize player as false:
+#initialize player as false: .......((((while the player is false, it is ready to take the value and start the game))))
 player = False
 
 while player == False:
+#make player take its play and sets player to true!
+
     player = input("stone, paper, scissor")
     if player == computer:
         print("It's a TIE!")
-    elif player=="stone":
+   elif player=="stone":
         if computer=="paper":
             print("Oops, You lose!", computer, "covers", player)
         else:
             print("You win!", player, "smashes", computer)
-    elif player=="paper":
+   elif player=="paper":
         if computer=="scissor":
             print("Oops, you lose!", computer, "cuts", player)
         else:
@@ -32,6 +34,6 @@ while player == False:
     else:
         print("wrong entry, please enter a valid spelling.")
 
-#player was set as true, but to continue loop set it back to False:
+#player was set as true, but to continue loop set it back to False: ................ ((((because you have to play again after breaking the loop))))
     player == False
     computer = x[randint(0,2)]
